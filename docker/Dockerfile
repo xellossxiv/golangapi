@@ -5,6 +5,8 @@ RUN go mod download
 
 COPY *.go ./
 
+RUN go get teststart
+
 RUN go build -o ./main
 
 EXPOSE 8081
