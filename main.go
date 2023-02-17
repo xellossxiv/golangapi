@@ -1,18 +1,22 @@
 package main
 
 import (
-	"fmt"
-	"net/http"
-	"flag"
+	service "teststart/controller"
+
+	"github.com/gin-gonic/gin"
 )
-var port = flag.Int("p", 8080, "server port")
 
 func main() {
-	flag.Parse()
-	http.HandleFunc("/", HelloServer)
-	http.ListenAndServe(fmt.Sprintf("0.0.0.0:%d", *port), nil)
+	router := gin.Default()
+	router.POST("iamAPI/v1/aralia/setUser", setUserAralia)
+	router.POST("iamAPI/v1/hcis/setUser", setUserHcis)
+	router.Run("localhost:8081")
 }
 
-func HelloServer(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, %s!", r.URL.Path[1:])
+func setUserAralia(c *gin.Context) {
+	service.SetUser(c, "aralia")
+}
+
+func setUserHcis(c *gin.Context) {
+	service.SetUser(c, "hcis")
 }
