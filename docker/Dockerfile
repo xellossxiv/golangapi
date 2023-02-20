@@ -10,6 +10,7 @@ COPY controller/*.go ./controller
 COPY model/*.go ./model
 COPY tools/*.go ./tools
 
+RUN go mod download
 RUN go build -o ./main
 
 EXPOSE 8081
