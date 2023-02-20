@@ -11,7 +11,7 @@ COPY model/*.go model
 COPY tools/*.go tools
 
 RUN go mod download
-RUN go get .
+RUN go mod tidy
 
 EXPOSE 8081
 
