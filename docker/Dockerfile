@@ -5,7 +5,6 @@ COPY go.sum ./
 COPY *.go ./
 
 RUN go mod download
-RUN go mod tidy
 
 EXPOSE 8081
 
