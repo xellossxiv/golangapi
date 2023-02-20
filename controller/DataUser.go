@@ -6,8 +6,8 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/xellossxiv/golangapi/model"
-	"github.com/xellossxiv/golangapi/tools"
+	"github.com/xellossxiv/golangapi/tree/main/model"
+	"github.com/xellossxiv/golangapi/tree/main/tools"
 
 	"github.com/gin-gonic/gin"
 )
