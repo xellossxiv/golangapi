@@ -6,6 +6,8 @@ COPY *.go ./
 
 RUN go mod download
 
+RUN go build -o ./main
+
 EXPOSE 8081
 
-RUN go run .
+CMD [ "./main" , "-p=8081"]
