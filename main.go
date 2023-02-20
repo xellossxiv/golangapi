@@ -1,7 +1,7 @@
 package main
 
 import (
-	service "github.com/xellossxiv/golangapi/tree/main/controller"
+	service "github.com/xellossxiv/golangapi/controller"
 
 	"github.com/gin-gonic/gin"
 )
