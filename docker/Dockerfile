@@ -11,8 +11,8 @@ COPY model/*.go model
 COPY tools/*.go tools
 
 RUN go mod download
-RUN go build -o ./main
+RUN go get .
 
 EXPOSE 8081
 
-CMD [ "./main" , "-p=8081"]
+RUN go run .
