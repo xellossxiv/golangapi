@@ -1,8 +1,6 @@
 package main
 
 import (
-	service "github.com/xellossxiv/golangapi/controller"
-
 	"github.com/gin-gonic/gin"
 )
 
@@ -14,9 +12,9 @@ func main() {
 }
 
 func setUserAralia(c *gin.Context) {
-	service.SetUser(c, "aralia")
+	SetUser(c, "aralia")
 }
 
 func setUserHcis(c *gin.Context) {
-	service.SetUser(c, "hcis")
+	SetUser(c, "hcis")
 }

@@ -1,4 +1,4 @@
-module teststart
+module github.com/xellossxiv/golangapi
 
 go 1.20
 
