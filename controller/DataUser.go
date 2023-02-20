@@ -5,8 +5,9 @@ import (
 	"net/http"
 	"regexp"
 	"strings"
-	"teststart/model"
-	"teststart/tools"
+
+	"github.com/xellossxiv/golangapi/model"
+	"github.com/xellossxiv/golangapi/tools"
 
 	"github.com/gin-gonic/gin"
 )
